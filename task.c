@@ -4,10 +4,11 @@
 void fillRandom(int*mass, int size){
     srand(time(nullptr));
         for (int i = 0; i < size; i++) {
-            *(mass + i) = 100 + random() % 51;
+            *(mass + i) = 100 + random() % 51;	//функция получилась уникальной... а если диапазон надо будет изменить??? как надо изменить функцию???
        }
 }
 
+//что должна вернуть эта функция???
 int showEl(const int* ar, int size, int n = 10, int m = 10){
     for(int i = 0; i < 10; i++){
         for(int j = 0; j < 10; j++){
@@ -24,6 +25,7 @@ void swap(int&a, int&b){
 
 }
 
+//ууух... когда у тебя куча свопов... это очень плохо...
 void intsertionSort(int* ar, int size){
     for(int i = 0; i < size - 1; i++){
             int j = i;
@@ -58,6 +60,7 @@ int max(int a, int b){
     return b;
 }
 
+//а вот эта функция точно работает?????
 int getMax(int* ar, int* first, int* last, int deep){
     if(last == first){
         std::cout << "максимальное число в массиве: " << *first << std::endl;
